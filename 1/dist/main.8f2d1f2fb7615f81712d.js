@@ -15,7 +15,7 @@
   \******************/
 /***/ (() => {
 
-eval("var a = 3;\n\n//# sourceURL=webpack:///./index.js?");
+eval("document.addEventListener('DOMContentLoaded', function () {\n  var container = document.querySelector('.container');\n  var text = document.createElement('a');\n  text.style.color = 'green';\n  text.textContent = 'Рады приветствовать';\n  container.append(text);\n});\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 

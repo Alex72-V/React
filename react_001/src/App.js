@@ -1,7 +1,8 @@
 import Message from "./Message";
+import './App.css';
 
 function App() {
-  const name = 'React'; //прописывается то что передаём пропсом в компонент
+  const name = 'React - "Message.js"'; //прописывается то что передаём пропсом в компонент
   return (
     <Message nom={name} /> //присваиваем имя для передачи в комп
   );

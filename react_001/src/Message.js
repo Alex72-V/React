@@ -1,6 +1,6 @@
 function Message(props) {
     return (
-<div>Сообщение из {props.nom}</div>
+<div className="App-message">Первый компонент {props.nom}</div>
     );
 } 
 

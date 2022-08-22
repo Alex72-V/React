@@ -1,4 +1,4 @@
-import Message from "./Message";
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {

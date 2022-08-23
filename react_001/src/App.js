@@ -1,8 +1,9 @@
-import Message from "./Message";
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {
-  const name = 'React - "Message.js"'; //прописывается то что передаём пропсом в компонент
+  const [ messageList, messageListState ] = useState([]);
+  const message = () =>
   return (
     <Message nom={name} /> //присваиваем имя для передачи в комп
   );

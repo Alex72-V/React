@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.message-text {
+  width: 420px;
+  margin: 12px;
+  padding: 7px;
+}
+
+.messageList {
+  display: block;
+}
+
+.main {
+  display: flex;
+}

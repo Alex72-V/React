@@ -71,8 +71,7 @@ function App() {
         component="form"
         sx={{ m: 1, borderRadius: '10px', gap: '10px', width: '400px', margin: '10px', padding: '15px', backgroundColor: 'primary.main', opacity: [0.9, 0.8, 0.7],}}
         noValidate
-        autoComplete="off"
-        >
+        autoComplete="off">
           <Typography variant="h4" component="div" color="primary">Сообщения</Typography>
           <TextField sx={{ margin: '10px 0 10px 0', backgroundColor: '#fff'}}
           id="outlined-multiline-flexible" fullWidth
@@ -93,7 +92,7 @@ function App() {
           />
           <Button sx={{ margin: '10px 0 10px 0'}} variant="outlined" size="large" fullWidth onClick={buttonClick}>Отправить сообщение</Button>
         </Box>
-        { message.map(item => {
+        { message.map((item) => {
           return (
             <Message author={item.author} text={item.text} key={item.id} />
           )

@@ -1,14 +1,11 @@
 import { combineReducers, createStore } from "redux";
-import { chatReduser } from "./chatsReduser/chatReduser";
-import { messageReduser } from "./messagesReducer/messageReducer";
+import { chatReducer } from "./chatsReducer/chatReducer";
+import { messageReducer } from "./messagesReducer/messageReducer";
 
-
-export const reduser = combineReducers(
-    {
-    chats: chatReduser,
-    messages: messageReduser
-
+const reducer = combineReducers({
+    chats: chatReducer,
+    messages: messageReducer
 })
 
 
-export const store = createStore();
+export const store = createStore(reducer);

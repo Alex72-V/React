@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getChats } from '../redux/chatsReduser/selectors';
+import { getChats } from '../redux/chatsReducer/selectors';
 
 
 

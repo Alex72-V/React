@@ -23,12 +23,12 @@ const initialState = {
 }
 
 
-export const messageReduser = (state = initialState, action) => {
+export const messageReducer = (state = initialState, action) => {
     switch (action.type) {
 
 
-        default:
-            return state
+    default:
+        return state
     }
 
 }

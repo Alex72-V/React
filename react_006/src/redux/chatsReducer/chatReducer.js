@@ -14,9 +14,9 @@ const initialState = {
             name: 'Den'
         }
     ]
-}
+};
 
-export const chatReduser = (state = initialState, action) => {
+export const chatReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'delete': 
             return {

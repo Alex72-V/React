@@ -1,4 +1,5 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
+import { createLogger } from "redux-logger";
 import { chatReducer } from "./chatsReducer/chatReducer";
 import { messageReducer } from "./messagesReducer/messageReducer";
 
@@ -7,17 +8,12 @@ const reducer = combineReducers({
     messages: messageReducer
 })
 
-const timer = store => next => action => {
-    const delay = action?.meta?.delay
-    if(!delay) {
-        return next(action)
-    }
-    
-    const timeout = setTimeout( () => next(action), delay)
-    
-    return () => {
-        clearTimeout(timeout)
-    }
-}
+const logger = createLogger({
 
-export const store = createStore(reducer, applyMiddleware(timer));
+    diff: true,
+    collapsed: true
+
+})
+
+
+export const store = createStore(reducer, applyMiddleware(logger));

@@ -11,7 +11,9 @@ function App() {
   const [name, setName] = useState('');
 
   const handleDelete = (id) => {
-    dispatch({type: 'delete', payload: id})
+    dispatch({type: 'delete', payload: id, meta: {
+      delay: 3000
+    }})
   }
   const handleChange = (event) => {
     setName(event.target.value)

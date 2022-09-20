@@ -1,3 +1,7 @@
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
+import "firebase/compat/auth";
+
 
 const firebaseConfig = {
 
@@ -8,3 +12,8 @@ const firebaseConfig = {
     messagingSenderId: "567465336089",
     appId: "1:567465336089:web:ef8b71f7aa3948dabcf988"
 };
+
+const firebaseDB = firebase.initializeApp(firebaseConfig);
+
+export const auth = firebase.auth();
+export const db = firebaseDB.database().ref()

@@ -8,7 +8,7 @@ const HomePage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const hendleAuth = () => {
+    const handleAuth = () => {
         if(user) {
             dispatch(logoutInitiate())
         }

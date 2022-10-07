@@ -14,6 +14,7 @@ const initialState = {
 const AddContactPage = () => {
     const [state, setState] = useState(initialState);
     const navigate = useNavigate();
+    const { name, email, contact } = state;
     const {id} = useParams();
 
     const handleSubmit = (e) => {
@@ -53,15 +54,15 @@ const AddContactPage = () => {
             onSubmit={handleSubmit}>
 
             <label htmlFor={"name"}>Name</label>
-            <input id={"name"} type={"text"} placeholder={"Your name is.."} name={"name"} value={name || ""}
+            <input id={"name"} type={"text"} placeholder={"Введите имя"} name={"name"} value={name || ""}
             onChange={handleInputChange}/>
 
             <label htmlFor={"email"}>Email</label>
-            <input placeholder={"Your email is..."} id={"email"} type={"email"} name={"email"} value={email || ""}
+            <input placeholder={"Введите email"} id={"email"} type={"email"} name={"email"} value={email || ""}
             onChange={handleInputChange}/>
 
             <label htmlFor={"contact"}>Contact</label>
-            <input id={"contact"} type={"number"} placeholder={"Your number is..."} name={"contact"} value={contact || ""}
+            <input id={"contact"} type={"number"} placeholder={"Введите номер"} name={"contact"} value={contact || ""}
             onChange={handleInputChange}/>
 
             <input type={"submit"} value={id ? "update" : "save"} />

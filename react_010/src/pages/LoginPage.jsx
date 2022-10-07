@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { userSelector } from "../redux/reducers/userReducer";
+import { userSelector } from "../redux/reducers/selectors";
 import { loginInitiate } from "../redux/actions";
 
 const LoginPage = () => {
